@@ -1,0 +1,2 @@
+class FriendStreamController < ApplicationController
+end

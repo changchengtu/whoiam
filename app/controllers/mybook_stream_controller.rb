@@ -1,0 +1,2 @@
+class MybookStreamController < ApplicationController
+end
