@@ -1,3 +1,42 @@
+.all-page {
+	background-color: #ff6600; 
+	height: 1045px;
+}
+
+.top-bar {
+	background-color: red; 
+	margin-top: 0px; 
+	height: 30px;
+}
+
+.top-bar ul {
+	background-color: #ff4400;
+	width:400px; 
+	list-style:none; 
+	padding:0px; 
+	border-style:none; 
+	float:right; 
+	margin:0px
+}
+
+.top-bar li {
+	width: 100px; 
+	float: right; 
+	text-align:center; 
+	background-color: #00ced1; 
+	margin-right: 2px;
+	height: 30px;
+}
+
+.main-page {
+	height: 903px; 
+	background-color: #33cc00;
+}
+
+.bottom-bar{ 
+	height: 60px; 
+	background-color: #3366ff;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
