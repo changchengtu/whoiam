@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121227033811) do
+ActiveRecord::Schema.define(:version => 20121228014214) do
+
+  create_table "books", :force => true do |t|
+    t.string   "book_name"
+    t.integer  "readedbook_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "readedbooks", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "book_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "provider"
@@ -19,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20121227033811) do
     t.string   "name"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.integer  "readedbook_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end

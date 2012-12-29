@@ -3,8 +3,9 @@ Whoiam::Application.routes.draw do
 	match 'auth/:provider/callback', to: 'sessions#create'
   	match 'auth/failure', to: redirect('/')
   	match 'signout', to: 'sessions#destroy', as: 'signout'
-	resources :introduce
 
+	resources :introduce
+	resources :mybook_stream
 	root to: 'introduce#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
