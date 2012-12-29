@@ -1,6 +1,13 @@
 class User < ActiveRecord::Base
   has_many :readedbooks
+  has_many :books, :through => :readedbooks
+
+  has_many :bookideas
+  has_many :books, :through => :bookideas
+
   attr_accessible :name, :oauth_expires_at, :oauth_token, :provider, :uid, :readedbook_id
+
+
 	def self.from_omniauth(auth)
     		where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       			user.provider = auth.provider

@@ -3,7 +3,4 @@ class Readedbook < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :book
-
-  has_one :book
-  has_one :user
 end
