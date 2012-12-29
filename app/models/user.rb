@@ -1,10 +1,9 @@
 class User < ActiveRecord::Base
+
   has_many :readedbooks
-  has_many :books, :through => :readedbooks
-
+  has_many :readed_books, :through => :readedbooks, :source => :book
   has_many :bookideas
-  has_many :books, :through => :bookideas
-
+  has_many :book_ideas, :through => :bookideas, :source => :book
   attr_accessible :name, :oauth_expires_at, :oauth_token, :provider, :uid, :readedbook_id
 
 
