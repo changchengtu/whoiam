@@ -1,5 +1,5 @@
 class IntroduceController < ApplicationController
 	def index
-		@users = User.all
+		@users = User.select(:name)
 	end
 end
