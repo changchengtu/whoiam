@@ -1,5 +1,5 @@
 class IntroduceController < ApplicationController
 	def index
-		@users = User.select("id, name")
+		@users = User.select("name")
 	end
 end
