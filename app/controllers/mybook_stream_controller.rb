@@ -1,6 +1,5 @@
 class MybookStreamController < ApplicationController
 
- 	before_filter :set_current_user
 	def index
 		@books = Book.select(:book_name).all
 		@ideas = Bookidea.select(:book_id).all
@@ -11,7 +10,8 @@ class MybookStreamController < ApplicationController
 	end
 
 	def create
-		@readedbook = Readedbook.new(:book_id=>params[:book_id].to_i, :user_id=> current_user.id)
+		
+		@readedbook = Readedbook.new(params[:book])
 		@readedbook.save
 		redirect_to :mybook_stream => :index
 	end
