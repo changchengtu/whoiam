@@ -11,6 +11,8 @@ class MybookStreamController < ApplicationController
 	end
 
 	def create
+		@readedbook = Readedbook.new(:book_id=>params[:book_id].to_i, :user_id=> current_user.id)
+		@readedbook.save
 		redirect_to :mybook_stream => :index
 	end
 end
