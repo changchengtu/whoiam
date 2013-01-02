@@ -1,7 +1,7 @@
 <%= form_tag '/mybook_stream', :method=>nil do%>
        
         <%= text_field :book, :book_id%>
-	<% text_field :book, :user_id, :value=>current_user.id%>
+	<%= text_field :book, :user_id, :value=>current_user.id%>
 
 <% end%>
 
