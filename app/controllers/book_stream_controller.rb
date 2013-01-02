@@ -1,17 +1,11 @@
 class BookStreamController < ApplicationController
 
-        
-        before_filter :current_user
-        protected
-        def current_user
-                @current_user ||= User.find_by_id(session[:user_id])
-                redirect_to introduce_index_path and return unless @current_user
-        end
+
+        before_filter :set_current_user
 
 	def index
-		@allbooks = Book.select(:book_name).all
+		@allbooks= Book.all
 	end
-
 	def new
 	end
 
@@ -20,4 +14,12 @@ class BookStreamController < ApplicationController
 		@newbook.save
 		redirect_to :book_stream => :index
 	end
+
+        protected
+        def set_current_user
+                @current_user ||= User.find_by_id(session[:user_id])
+                redirect_to introduce_index_path and return unless @current_user
+        end
+
+
 end
