@@ -3,7 +3,7 @@ class MybookStreamController < ApplicationController
  	before_filter :set_current_user
 	def index
 		@books = Book.select(:book_name).all
-		@ideas = Bookidea.all
+		@ideas = Bookidea.select(:book_id).all
 	end
 
 	def new
