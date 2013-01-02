@@ -9,7 +9,7 @@
 <body>
 <div id="id-all-page" class="all-page" >
   <div id="id-top-bar" class="top-bar" >
-    <ul>
+    <ul id="id-individual-bar" class="individual-bar">
       <li>
  	<% if current_user %>
     	Signed in as <strong><%= current_user.name %></strong>!
@@ -18,7 +18,13 @@
     	<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
   	<% end %>
       </li>
-    </ul>  
+    </ul>
+    <ul id="id-main-bar" class="main-bar">
+      <li><%= link_to "book_stream", book_stream_index_path%></li>
+      <li><%= link_to "mybook_stream", mybook_stream_index_path%></li>
+      <li>friend_stream</li>
+    </ul>
+  
   </div>
   <div id="id-main-page" class="main-page" >
     <%= yield %>

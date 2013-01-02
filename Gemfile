@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 gem 'omniauth-facebook'
 gem 'rails', '3.2.8'
 

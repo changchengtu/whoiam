@@ -9,7 +9,28 @@
 	height: 30px;
 }
 
-.top-bar ul {
+
+.main-bar {
+        background-color: #ff4400;
+        width:400px;
+        list-style:none;
+        padding:0px;
+        border-style:none;
+        float:left;
+        margin:0px
+}
+
+.main-bar li {
+        width: 100px;
+        float: left;
+        text-align:center;
+        background-color: #33ced1;
+        margin-right: 2px;
+        height: 30px;
+}
+
+
+.individual-bar {
 	background-color: #ff4400;
 	width:400px; 
 	list-style:none; 
@@ -19,7 +40,7 @@
 	margin:0px
 }
 
-.top-bar li {
+.individual-bar li {
 	width: 100px; 
 	float: right; 
 	text-align:center; 

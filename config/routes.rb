@@ -4,6 +4,7 @@ Whoiam::Application.routes.draw do
   	match 'auth/failure', to: redirect('/')
   	match 'signout', to: 'sessions#destroy', as: 'signout'
 
+	resources :book_stream
 	resources :introduce
 	resources :mybook_stream
 	root to: 'introduce#index'
