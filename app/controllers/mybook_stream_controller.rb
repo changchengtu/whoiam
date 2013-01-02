@@ -1,6 +1,7 @@
 class MybookStreamController < ApplicationController
 
 	def index
+		@tests = User.all
 		@books = Book.select(:book_name).all
 		@ideas = Bookidea.select(:book_id).all
 	end
@@ -10,7 +11,6 @@ class MybookStreamController < ApplicationController
 	end
 
 	def create
-		@tests = User.all		
 		@readedbook = Readedbook.new(params[:book])
 		@readedbook.save
 		redirect_to :mybook_stream => :index
