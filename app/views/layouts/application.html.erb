@@ -20,9 +20,24 @@
       </li>
     </ul>
     <ul id="id-main-bar" class="main-bar">
-      <li><%= link_to "book_stream", book_stream_index_path%></li>
-      <li><%= link_to "mybook_stream", mybook_stream_index_path%></li>
-      <li>friend_stream</li>
+      <li>
+		<%=link_to_if current_user.nil?,"login", " /auth/facebook" do
+			link_to "book_stream", book_stream_index_path
+   		   end
+		%>
+      </li>
+      <li>
+                <%=link_to_if current_user.nil?,"login", " /auth/facebook" do
+                        link_to "friend_stream", friend_stream_index_path
+                   end
+                %>
+      </li>
+      <li>
+		<%=link_to_if current_user.nil?,"login", " /auth/facebook" do
+        		link_to "mybook_stream", mybook_stream_index_path
+   		   end
+		%>
+      </li>
     </ul>
   
   </div>
