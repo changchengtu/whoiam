@@ -10,7 +10,7 @@ class MybookStreamController < ApplicationController
 	end
 
 	def create
-		@test = User.all		
+		@tests = User.all		
 		@readedbook = Readedbook.new(params[:book])
 		@readedbook.save
 		redirect_to :mybook_stream => :index
