@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20121229130319) do
 
   create_table "bookideas", :force => true do |t|
     t.string   "idea"
+    t.integer  "process"
     t.integer  "user_id"
     t.integer  "book_id"
     t.datetime "created_at", :null => false
