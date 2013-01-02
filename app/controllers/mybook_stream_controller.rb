@@ -1,7 +1,6 @@
 class MybookStreamController < ApplicationController
 
 	def index
-		@tests = User.find(11).readed_books
 		@books = Book.select(:book_name).all
 		@ideas = Bookidea.select(:book_id).all
 	end
