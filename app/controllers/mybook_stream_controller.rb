@@ -1,9 +1,9 @@
 class MybookStreamController < ApplicationController
 
 	def index
-		@tests = User.select(:name).all
+		@tests = User.first.bookideas.all
 		@books = Book.select(:book_name).all
-		@ideas = Bookidea.select(:book_id).all
+		@ideas = Bookidea.select(:book_id,:idea).all
 	end
 
 	def new
