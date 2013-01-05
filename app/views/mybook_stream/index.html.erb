@@ -1,6 +1,18 @@
 You haved already readed following books:
 </br>
-<%= @tests%>
+<table>
+	<thead>
+		<tr>
+			<th>book name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<%@tests.each do |test|%>
+			<tr>
+				<td><%=test.book_name%>
+			</tr>
+	</tbody>
+</table>
 </br>
 </br>
 
