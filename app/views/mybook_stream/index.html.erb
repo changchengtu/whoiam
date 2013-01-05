@@ -10,6 +10,7 @@ You haved already readed following books:
 		<%@tests.each do |test|%>
 			<tr>
 				<td><%=test.book_name%></td>
+				<td><%= link_to "test", mybook_stream_saveidea_path%></td>
 			</tr>
 		<%end%>
 	</tbody>
