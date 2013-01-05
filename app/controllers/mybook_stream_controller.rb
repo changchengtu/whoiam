@@ -15,4 +15,8 @@ class MybookStreamController < ApplicationController
 		@readedbook.save
 		redirect_to :mybook_stream => :index
 	end
+
+	def saveidea
+	
+	end
 end
