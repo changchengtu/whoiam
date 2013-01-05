@@ -10,11 +10,11 @@ You haved already readed following books:
 		<%@tests.each do |test|%>
 			<tr>
 				<td><%=test.book_name%></td>
-				<td><%= link_to "idea", mybook_stream_saveidea%></td>
 			</tr>
 		<%end%>
 	</tbody>
 </table>
+<%= link_to "idea", mybook_stream_saveidea%>
 </br>
 </br>
 
