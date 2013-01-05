@@ -1,7 +1,8 @@
+If you already readed a book from all the books,enter a book name:
+</br>
 <%= form_tag '/mybook_stream', :method=>nil do%>
-       
         <%= text_field :book, :book_id%>
-	<%= text_field :book, :user_id, :value=>current_user.id%>
+	<% text_field :book, :user_id, :value=>current_user.id%>
 	 <%= submit_tag 'submit'%>
 <% end%>
 
