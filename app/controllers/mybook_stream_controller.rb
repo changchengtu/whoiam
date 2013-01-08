@@ -2,7 +2,6 @@ class MybookStreamController < ApplicationController
 	before_filter :set_current_user
 	def index
 		@readedbooks = User.find(current_user.id).readed_books.all
-		@books = Book.select(:book_name).all
 		@ideas = Readedbook.select(:user_id).all
 	end
 
@@ -16,6 +15,10 @@ class MybookStreamController < ApplicationController
 		redirect_to :mybook_stream => :index
 	end
 
+	def show
+		id = params[:id] # retrieve readedbook ID from URI route
+ 		@readedbooks = Readedbook.find(id) 
+	end
 	def saveidea
 	
 	end

@@ -10,7 +10,7 @@ You haved already readed following books:
 		<%@readedbooks.each do |readedbook|%>
 			<tr>
 				<td><%=readedbook.book_name%></td>
-				<td><%= link_to "saveidea", mybook_stream_saveidea_path%></td>
+				<td><%= link_to "saveidea", mybook_stream_path(readedbook)%></td>
 			</tr>
 		<%end%>
 	</tbody>
