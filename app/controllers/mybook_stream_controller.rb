@@ -17,6 +17,7 @@ class MybookStreamController < ApplicationController
 
 	def show
 		id = params[:id] # retrieve readedbook ID from URI route
+		@readedbook = Readedbook.find(id)
 	end
 	def saveidea
 	
