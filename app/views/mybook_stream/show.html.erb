@@ -1,12 +1,12 @@
 <%=@readedbook.book_name%>
 
-<%= form_tag '/saveidea', :method=>:post do%>
+<%= form_tag '/mybook_stream/saveidea', :method=>:post do%>
 
 	<%= label :idea, :book_id,"id"%>
-        <%= text_field :idea, :book_id, :value=>@id%>
+        <%= text_field :idea, :book_id, :value=>1%>
 
 	<%= label :idea, :user_id,"user_id"%>
-        <%= text_field :idea, :user_id, :value=>current_user.id%>
+        <%= text_field :idea, :user_id, :value=>1%>
 
 	<%= label :idea, :process,"process"%>
         <%= text_field :idea, :process, :value=>20%>

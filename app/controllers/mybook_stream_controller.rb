@@ -1,5 +1,4 @@
 class MybookStreamController < ApplicationController
-        before_filter :set_current_user
 	
 	def index
 		@readedbooks = User.find(current_user.id).readed_books.all
