@@ -2,16 +2,16 @@
 
 <%= form_tag '/mybook_stream/saveidea', :method=>:post do%>
 
-	<%= text_field :idea, :book_id%>
+	<%= label :idea, :book_id,"id"%>
         <%= text_field :idea, :book_id, :value=>@id%>
 
-	<%= text_field :idea, :user_id%>
+	<%= label :idea, :user_id,"user_id"%>
         <%= text_field :idea, :user_id, :value=>current_user.id%>
 
-	<%= text_field :idea, :process%>
+	<%= label :idea, :process,"process"%>
         <%= text_field :idea, :process, :value=>20%>
 
-        <%= text_field :idea, :idea%>
+        <%= label :idea, :idea,"idea"%>
         <%= text_field :idea, :idea, :value=>"enter idea here"%>
          <%= submit_tag 'submit'%>
 <% end%>
