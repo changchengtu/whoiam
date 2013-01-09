@@ -22,6 +22,6 @@ class MybookStreamController < ApplicationController
 
                 @bookidea = Bookidea.new(params[:idea])
 		@bookidea.save
-	
+		redirect_to :mybook_stream => :index	
 	end
 end
