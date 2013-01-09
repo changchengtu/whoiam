@@ -1,6 +1,6 @@
 <%=@readedbook.book_name%>
 
-<%= form_tag '/mybook_stream/saveidea', :method=>:post do%>
+<%= form_tag mybook_stream_saveidea_path, :method=>:post do%>
 
 	<%= label :idea, :book_id,"id"%>
         <%= text_field :idea, :book_id, :value=>1%>
