@@ -15,11 +15,12 @@ class MybookStreamController < ApplicationController
 		redirect_to :mybook_stream => :index
 	end
 
-	def show
+	def idea
 		id = params[:id] # retrieve book ID from URI route
 		@readedbook = Book.find(id)
 	end
 	def saveidea
-	
+                id = params[:id] # retrieve book ID from URI route
+                @readedbook = Book.find(id)	
 	end
 end

@@ -4,7 +4,6 @@ Whoiam::Application.routes.draw do
   	match 'auth/failure', to: redirect('/')
   	match 'signout', to: 'sessions#destroy', as: 'signout'
 
-
 	get 'mybook_stream/saveidea'=>'mybook_stream#saveidea'
 	resources :friend_stream
 	resources :book_stream
