@@ -1,4 +1,6 @@
 class MybookStreamController < ApplicationController
+	
+
 	def index
 		@readedbooks = User.find(current_user.id).readed_books.all
 	end
@@ -13,7 +15,7 @@ class MybookStreamController < ApplicationController
 		redirect_to :mybook_stream => :index
 	end
 
-	def idea
+	def show
 		id = params[:id] # retrieve book ID from URI route
 		@readedbook = Book.find(id)
 	end
