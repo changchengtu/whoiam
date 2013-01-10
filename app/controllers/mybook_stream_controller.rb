@@ -2,6 +2,7 @@ class MybookStreamController < ApplicationController
 	
 	def index
 		@readedbooks = User.find(current_user.id).readed_books.all
+		@test = Uder.find(current_user.id).readed_books.select(:book_name)
 		@ideas = Bookidea.all
 	end
 
